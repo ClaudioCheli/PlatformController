@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="441.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Player">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="54.0" prefWidth="200.0" />
+      <GridPane layoutX="42.0" layoutY="100.0" prefHeight="90.0" prefWidth="237.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="147.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Position" />
+            <Label text="Speed" GridPane.rowIndex="1" />
+            <Label text="Jump speed" GridPane.rowIndex="2" />
+            <TextField fx:id="positionXFieldRead" text="0.0" GridPane.columnIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets right="110.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <TextField fx:id="speedFieldRead" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <TextField fx:id="jumpSpeedFieldRead" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <Label text="x" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="y" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="positionYFieldRead" text="0.0" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="60.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <Separator layoutX="288.0" layoutY="14.0" orientation="VERTICAL" prefHeight="384.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="300.0" layoutY="14.0" text="System">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="300.0" layoutY="54.0" prefWidth="200.0" />
+      <GridPane layoutX="300.0" layoutY="69.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="37.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="163.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="FPS" />
+            <TextField fx:id="fpsField" maxWidth="150.0" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button layoutX="418.0" layoutY="340.0" mnemonicParsing="false" onAction="#connect" text="Connect" AnchorPane.bottomAnchor="35.0" />
+      <GridPane layoutX="318.0" layoutY="242.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Port" />
+            <Label text="Android IP" GridPane.rowIndex="1" />
+            <TextField fx:id="portField" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <TextField fx:id="ipField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <Label text="Status" GridPane.rowIndex="2" />
+            <Label fx:id="connectionStatusLabel" text="Not connected" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label layoutX="300.0" layoutY="159.0" text="Connection">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="300.0" layoutY="200.0" prefWidth="200.0" />
+      <Button layoutX="492.0" layoutY="340.0" mnemonicParsing="false" onAction="#disconnect" text="Disconnect" AnchorPane.bottomAnchor="35.0" />
+      <Label layoutX="22.0" layoutY="70.0" text="Read">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="210.0" text="Write">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="207.0" layoutY="440.0" mnemonicParsing="false" onAction="#Send" text="Send" AnchorPane.bottomAnchor="35.0" />
+      <GridPane layoutX="48.0" layoutY="240.0" prefHeight="90.0" prefWidth="237.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="90.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="147.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Position" />
+            <Label text="Speed" GridPane.rowIndex="1" />
+            <Label text="Jump speed" GridPane.rowIndex="2" />
+            <TextField fx:id="positionXFieldWrite" text="0.0" GridPane.columnIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets right="110.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <TextField fx:id="speedFieldWrite" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <TextField fx:id="jumpSpeedFieldWrite" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+            </TextField>
+            <Label text="x" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="y" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="positionYFieldWrite" text="0.0" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="-0.5" left="-0.5" right="-0.5" top="-0.5" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="60.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+   </children>
+</AnchorPane>
